@@ -31,8 +31,7 @@ html body .page-header .page-nav {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  -webkit-animation: close 1s 1 both ease;
-          animation: close 1s 1 both ease;
+  height: var(--closed-nav-height);
 }
 
 @-webkit-keyframes close {
@@ -109,11 +108,6 @@ html body .page-header .page-nav .page-nav__list .page-nav__item .page-nav__link
   text-decoration: none;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
-}
-
-html body .page-header .page-nav.opened {
-  -webkit-animation: open 1s 1 both ease;
-          animation: open 1s 1 both ease;
 }
 
 @-webkit-keyframes open {

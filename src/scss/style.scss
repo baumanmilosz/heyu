@@ -29,7 +29,7 @@ html {
       .page-nav {
         display: grid;
         grid-template-columns: auto auto;
-        animation: close 1s 1 both ease;
+        height: var(--closed-nav-height);
 
         @keyframes close {
           from {
@@ -90,9 +90,7 @@ html {
         }
       }
 
-      .page-nav.opened {
-        animation: open 1s 1 both ease;
-      }
+      .page-nav.opened {}
 
       @keyframes open {
         from {
