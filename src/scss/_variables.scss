@@ -3,8 +3,7 @@ $headers-color: #363636;
 $text-color: #808080;
 $btn-weight: bold;
 $line-color: #e0e0e0;
-$main-gradient: linear-gradient(90deg #eb402c,
-#d90647);
+$main-gradient: linear-gradient(#d90647, #eb402c);
 $avatar-subtext-color: #667386;
 $icon-color: #fbfbfb;
 $rectangle-color: #232323;
@@ -13,7 +12,8 @@ $app-icon-shadow: 10px 10px 30px 0 $main-gradient;
 $review-box-shadow: 30px 30px 60px 0 $headers-color;
 $input-bg: #f8f8f8;
 
-$lato-font-family: 'Lato';
+$lato-font-family: 'Lato',
+sans-serif;
 $header-size: 60px;
 $paragraph-size: 18px;
 $avatar-caption: 16px;
@@ -25,8 +25,8 @@ $page-margin-bottom: 25px;
 $page-margin-horizontal: 50px;
 
 $nav-margin-left: 50px;
-$h1-letter-spacing: 40;
-$h1-margin-bottom: 40px;
+$h2-letter-spacing: 2px;
+$h2-margin-bottom: 40px;
 
 $header-btn-padding: 20px 50px;
 $header-margin-bottom: 65px;

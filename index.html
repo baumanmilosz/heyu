@@ -6,24 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HeyU Landing Page</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
   <link rel="stylesheet" href="./src/css/style.css">
+
 </head>
 
 <body>
   <header class="page-header">
     <nav class="page-nav">
-      <h1 class="page-nav__title"><a class="page-logo" href="">HeyU</a></h1>
+      <h1 class="page-nav__title"><a class="page-nav__link" href="">HeyU</a></h1>
+      <button type="button" class="page-nav__btn" href=""><i class="page-nav__icon fas fa-bars"></i></button>
       <ul class="page-nav__list">
-        <li class="page-nav__item"><a class="page-nav__link" href=""></a>About</li>
-        <li class="page-nav__item"><a class="page-nav__link" href=""></a>Faq</li>
-        <li class="page-nav__item"><a class="page-nav__link" href=""></a>Support</li>
-        <li class="page-nav__item"><a class="page-nav__link" href=""></a>Blog</li>
+        <li class="page-nav__item"><a class="page-nav__link" href="">About</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="">Faq</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="">Support</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="">Blog</a></li>
       </ul>
     </nav>
     <div class="page-hero">
       <h2 class="page-hero__title">Simple, safe & beautiful.</h2>
       <p class="page-hero__description">With HeyU, you'll get fast, simple, secure messaging!</p>
-      <button class="page-hero__btn">Download now</button>
+      <button class="page-hero__btn"><span class="page-hero__text">Download now</span></button>
       <div class="picture-wrapper">
         <img class="picture" src="./assets/phone.png" alt="">
       </div>
@@ -165,7 +170,7 @@
     </form>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
