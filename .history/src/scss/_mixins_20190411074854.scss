@@ -1,0 +1,10 @@
+@mixin margin-auto() {
+  margin: 0 auto;
+}
+
+@mixin center () {
+  position: absoute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}

@@ -179,6 +179,92 @@ html body .page-header .page-hero .picture-wrapper {
   display: none;
 }
 
+html body .app-description {
+  padding: 40px 20px;
+}
+
+html body .app-description .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+html body .app-description .wrapper .app-feature {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+}
+
+html body .app-description .wrapper .app-feature .feature-img-wrapper {
+  position: relative;
+  height: 550px;
+}
+
+html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 400px;
+}
+
+html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper img {
+  height: 100%;
+}
+
+html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper:nth-child(1) {
+  top: 45%;
+  left: 40%;
+}
+
+html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper:nth-child(2) {
+  top: 60%;
+  left: 60%;
+}
+
+html body .app-description .wrapper .app-feature:nth-child(2) .feature-img-wrapper {
+  margin-bottom: 40px;
+}
+
+html body .app-description .wrapper .app-feature .app-feature-description {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+html body .app-description .wrapper .app-feature .app-feature-description .app-feature__title {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  color: #363636;
+  font-weight: bold;
+}
+
+html body .app-description .wrapper .app-feature .app-feature-description .app-feature__title .dot {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d90647), to(#eb402c));
+  background-image: linear-gradient(#d90647, #eb402c);
+}
+
+html body .app-description .wrapper .app-feature .app-feature-description .app-feature__text {
+  max-width: 500px;
+  font-size: 1.5rem;
+  color: #808080;
+}
+
 @media (min-width: 736px) {
   html {
     font-size: 12px;

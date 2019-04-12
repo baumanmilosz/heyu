@@ -1,0 +1,10 @@
+@mixin margin-auto($vmargin, $hmargin) {
+  margin: {
+    left: auto;
+  }
+}
+
+@mixin center ($position) {
+  position: absoute;
+  transform: translate(-50%, -50%)
+}

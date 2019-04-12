@@ -1,0 +1,17 @@
+@import './variables';
+@import './mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  // padding: $page-margin-top $page-margin-horizontal $page-margin-bottom;
+
+  .page-header {
+    background-image: $main-gradient;
+    margin: 10px;
+  }
+}

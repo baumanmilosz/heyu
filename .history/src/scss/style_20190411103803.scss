@@ -1,0 +1,24 @@
+@import './variables';
+@import './mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  // padding: $page-margin-top $page-margin-horizontal $page-margin-bottom;
+
+  .page-header {
+    background-image: $main-gradient;
+
+    .page-nav {
+      padding: 40px 50px;
+    }
+  }
+}
