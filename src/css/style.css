@@ -1,6 +1,7 @@
 :root {
   --closed-nav-height: 36px;
   --opened-nav-height: 246px;
+  --rect-gradient-height: 200px;
 }
 
 * {
@@ -190,6 +191,8 @@ html body .app-description .wrapper {
       grid-template-columns: auto;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 html body .app-description .wrapper .app-feature {
@@ -261,7 +264,8 @@ html body .app-description .wrapper .app-feature .app-feature-description .app-f
 
 html body .app-description .wrapper .app-feature .app-feature-description .app-feature__text {
   max-width: 500px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 26px;
   color: #808080;
 }
 
@@ -367,6 +371,7 @@ html body .app-description .wrapper .app-feature .app-feature-description .app-f
     z-index: 1;
   }
   html body .app-description {
+    padding: var(--rect-gradient-height) 20px;
     position: relative;
   }
   html body .app-description::before {
@@ -376,9 +381,87 @@ html body .app-description .wrapper .app-feature .app-feature-description .app-f
     left: 0;
     top: 0;
     width: 100%;
-    height: 200px;
+    height: var(--rect-gradient-height);
     background-image: -webkit-gradient(linear, left top, right bottom, color-stop(49.9%, #eb402c), color-stop(50.1%, transparent));
     background-image: linear-gradient(to right bottom, #eb402c 49.9%, transparent 50.1%);
+  }
+  html body .app-description .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  html body .app-description .wrapper .app-feature {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  html body .app-description .wrapper .app-feature .feature-img-wrapper {
+    position: relative;
+    height: 550px;
+  }
+  html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 400px;
+  }
+  html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper img {
+    height: 100%;
+  }
+  html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper:nth-child(1) {
+    top: 45%;
+    left: 40%;
+  }
+  html body .app-description .wrapper .app-feature .feature-img-wrapper .pic-wrapper:nth-child(2) {
+    top: 60%;
+    left: 60%;
+  }
+  html body .app-description .wrapper .app-feature:nth-child(2) .feature-img-wrapper {
+    margin-bottom: 40px;
+  }
+  html body .app-description .wrapper .app-feature .app-feature-description {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    justify-items: start;
+    text-align: left;
+  }
+  html body .app-description .wrapper .app-feature .app-feature-description .app-feature__title {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    color: #363636;
+    font-weight: bold;
+    text-align: left;
+  }
+  html body .app-description .wrapper .app-feature .app-feature-description .app-feature__title .dot {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d90647), to(#eb402c));
+    background-image: linear-gradient(#d90647, #eb402c);
+  }
+  html body .app-description .wrapper .app-feature .app-feature-description .app-feature__text {
+    max-width: 500px;
+    font-size: 1.4rem;
+    line-height: 26px;
+    color: #808080;
+  }
+  html body .app-description .wrapper .app-feature:nth-child(2) .feature-img-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 

@@ -4,6 +4,7 @@
 :root {
   --closed-nav-height: 36px;
   --opened-nav-height: 246px;
+  --rect-gradient-height: 200px;
 }
 
 * {
@@ -90,7 +91,6 @@ html {
         }
       }
 
-      .page-nav.opened {}
 
       @keyframes open {
         from {
@@ -163,6 +163,8 @@ html {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
+        max-width: 400px;
+        @include margin-auto;
 
         .app-feature {
           display: grid;
@@ -221,7 +223,8 @@ html {
 
             .app-feature__text {
               max-width: 500px;
-              font-size: 1.5rem;
+              font-size: 1.4rem;
+              line-height: 26px;
               color: $text-color;
             }
           }
@@ -307,7 +310,6 @@ html {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
-          // background-color: red;
 
           .slogan {
             text-align: left;
@@ -338,6 +340,7 @@ html {
       }
 
       .app-description {
+        padding: var(--rect-gradient-height) 20px;
         position: relative;
 
         &::before {
@@ -347,13 +350,95 @@ html {
           left: 0;
           top: 0;
           width: 100%;
-          height: 200px;
+          height: var(--rect-gradient-height);
           background-image: linear-gradient(to right bottom, #eb402c 49.9%, transparent 50.1%);
+        }
+
+        .wrapper {
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto auto;
+          max-width: 1200px;
+          @include margin-auto;
+
+          .app-feature {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+
+            .feature-img-wrapper {
+              position: relative;
+              height: 550px;
+
+
+              .pic-wrapper {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                height: 400px;
+
+                img {
+                  height: 100%;
+                }
+
+                &:nth-child(1) {
+                  top: 45%;
+                  left: 40%;
+                }
+
+                &:nth-child(2) {
+                  top: 60%;
+                  left: 60%;
+                }
+              }
+            }
+
+            &:nth-child(2) .feature-img-wrapper {
+              margin-bottom: 40px;
+            }
+
+            .app-feature-description {
+              display: grid;
+              grid-template-columns: auto;
+              grid-template-rows: auto;
+              align-content: center;
+              justify-items: start;
+              text-align: left;
+
+              .app-feature__title {
+                margin-bottom: 20px;
+                font-size: 4rem;
+                color: $headers-color;
+                font-weight: bold;
+                text-align: left;
+
+                .dot {
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  background-image: $main-gradient;
+                }
+              }
+
+              .app-feature__text {
+                max-width: 500px;
+                font-size: 1.4rem;
+                line-height: 26px;
+                color: $text-color;
+              }
+            }
+          }
+
+          .app-feature:nth-child(2) {
+
+            .feature-img-wrapper {
+              order: 2;
+            }
+          }
         }
       }
     }
   }
 }
+
 
 @media (min-width: 1920px) {
   html {
