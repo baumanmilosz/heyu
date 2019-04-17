@@ -157,9 +157,10 @@ html {
     }
 
     .app-description {
-      padding: 40px 20px;
+
 
       .wrapper {
+        padding: 0 20px 50px;
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -231,14 +232,122 @@ html {
         }
       }
     }
+
+    .app-description::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $line-color;
+    }
+
+    .reviews {
+      padding: 40px 30px;
+      text-align: center;
+
+      .wrapper {
+        .reviews-title {
+          font-size: 4rem;
+          margin-bottom: 50px;
+          font-size: 4rem;
+          color: $headers-color;
+          font-weight: bold;
+
+          .dot {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: $main-gradient;
+          }
+        }
+
+        .reviews-wrapper {
+          max-width: 1200px;
+          @include margin-auto();
+
+          .comment-box {
+            max-width: 400px;
+            @include margin-auto();
+            margin-bottom: 2rem;
+
+            .comment {
+              background-color: $white-color;
+              display: grid;
+              grid-template-columns: auto;
+              grid-template-rows: auto auto;
+              align-content: space-between;
+              position: relative;
+              padding: 20px;
+              line-height: 26px;
+              font-size: 1.4rem;
+              border: 1px solid $line-color;
+              color: $text-color;
+              margin-bottom: 30px;
+
+              .comment__company {
+                margin-top: 10px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: $main-gradient;
+                font-weight: bold;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: block;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+              }
+            }
+
+            .author {
+              display: block;
+              // background-color: red;
+
+              .avatar {
+                font-size: 1.4rem;
+
+                .avatar__name {
+                  color: $headers-color;
+
+                  .avatar__profession {
+                    display: block;
+                    color: $avatar-subtext-color;
+                    font-size: 1.3rem;
+                  }
+                }
+
+                img {
+                  margin-bottom: 10px;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              .comment {
+                border: none;
+                box-shadow: $review-box-shadow;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+
+// TABLETS
 
 @media (min-width: 736px) {
   html {
     font-size: 12px;
   }
 }
+
+// DESKTOP
 
 @media (min-width: 1024px) {
   html {
@@ -340,7 +449,7 @@ html {
       }
 
       .app-description {
-        padding: var(--rect-gradient-height) 20px;
+        padding: var(--rect-gradient-height) 0 0;
         position: relative;
 
         &::before {
@@ -355,6 +464,7 @@ html {
         }
 
         .wrapper {
+          padding: 100px 80px;
           display: grid;
           grid-template-columns: auto;
           grid-template-rows: auto auto;
@@ -431,6 +541,73 @@ html {
 
             .feature-img-wrapper {
               order: 2;
+            }
+          }
+        }
+      }
+
+      .reviews {
+        padding: 40px 30px;
+        text-align: center;
+
+        .wrapper {
+          .reviews-title {
+            font-size: 4rem;
+            margin-bottom: 100px;
+            font-size: 4rem;
+            color: $headers-color;
+            font-weight: bold;
+
+            .dot {
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-image: $main-gradient;
+            }
+          }
+
+          .reviews-wrapper {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 20px;
+
+            .comment-box {
+              max-width: 400px;
+              @include margin-auto();
+              margin-bottom: 20px;
+
+              .comment {
+                text-align: left;
+                min-height: 220px;
+                line-height: 30px;
+                font-size: 1.2rem;
+
+
+                .comment__company {}
+
+                &::after {}
+              }
+
+              .author {
+
+
+                .avatar {
+
+
+                  .avatar__name {
+
+
+                    .avatar__profession {}
+                  }
+
+                  img {}
+                }
+              }
+
+              &:nth-child(2) {
+                margin-top: -30px;
+
+                .comment {}
+              }
             }
           }
         }
