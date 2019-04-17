@@ -374,6 +374,60 @@ html body .reviews .wrapper .reviews-wrapper .comment-box:nth-child(2) .comment 
           box-shadow: 0 30px 60px 0 #36363626;
 }
 
+html body .overview {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d90647), to(#eb402c));
+  background-image: linear-gradient(#d90647, #eb402c);
+}
+
+html body .overview .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  padding: 50px 20px;
+}
+
+html body .overview .wrapper .feature {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+html body .overview .wrapper .feature .feature__title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+html body .overview .wrapper .feature .feature__description {
+  font-size: 1.5rem;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+html body .overview .wrapper .phone-wrapper {
+  display: none;
+  position: relative;
+}
+
+html body .overview .wrapper .phone-wrapper .phone {
+  position: relative;
+  width: 100%;
+}
+
+html body .overview .wrapper .phone-wrapper .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 @media (min-width: 736px) {
   html {
     font-size: 12px;
@@ -570,7 +624,7 @@ html body .reviews .wrapper .reviews-wrapper .comment-box:nth-child(2) .comment 
             order: 2;
   }
   html body .reviews {
-    padding: 40px 30px;
+    padding: 50px 30px;
     text-align: center;
   }
   html body .reviews .wrapper .reviews-title {
@@ -637,6 +691,98 @@ html body .reviews .wrapper .reviews-wrapper .comment-box:nth-child(2) .comment 
   }
   html body .reviews .wrapper .reviews-wrapper .comment-box:nth-child(2) {
     margin-top: -30px;
+  }
+  html body .overview .wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    grid-gap: 20px;
+        grid-template-areas: "feature1 phone feature3" "feature2 phone feature4";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px 20px;
+  }
+  html body .overview .wrapper .feature {
+    position: relative;
+    max-width: 600px;
+    text-align: initial;
+    margin: 0 auto;
+    color: #fff;
+  }
+  html body .overview .wrapper .feature.feature1, html body .overview .wrapper .feature.feature2 {
+    text-align: right;
+    padding-right: 100px;
+  }
+  html body .overview .wrapper .feature.feature1 .feature__icon, html body .overview .wrapper .feature.feature2 .feature__icon {
+    top: 0;
+    right: 0;
+  }
+  html body .overview .wrapper .feature.feature3, html body .overview .wrapper .feature.feature4 {
+    text-align: left;
+    padding-left: 100px;
+  }
+  html body .overview .wrapper .feature.feature3 .feature__icon, html body .overview .wrapper .feature.feature4 .feature__icon {
+    top: 0;
+    left: 0;
+  }
+  html body .overview .wrapper .feature .feature__title {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  html body .overview .wrapper .feature.feature1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: feature1;
+  }
+  html body .overview .wrapper .feature.feature2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: feature2;
+  }
+  html body .overview .wrapper .feature.feature3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: feature3;
+  }
+  html body .overview .wrapper .feature.feature4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: feature4;
+  }
+  html body .overview .wrapper .feature .feature__description {
+    font-size: 1.6rem;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+  }
+  html body .overview .wrapper .feature .feature__icon {
+    position: absolute;
+  }
+  html body .overview .wrapper .phone-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: phone;
+    display: block;
+    position: relative;
+  }
+  html body .overview .wrapper .phone-wrapper .phone {
+    position: relative;
+    width: 100%;
+  }
+  html body .overview .wrapper .phone-wrapper .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 

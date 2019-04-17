@@ -336,6 +336,66 @@ html {
         }
       }
     }
+
+    .overview {
+      background-image: $main-gradient;
+
+      .wrapper {
+        max-width: 1200px;
+        @include margin-auto();
+        display: grid;
+        grid-template-columns: auto;
+        padding: 50px 20px;
+
+        .feature {
+          max-width: 400px;
+          @include margin-auto();
+          text-align: center;
+          color: $white-color;
+          margin-bottom: 60px;
+
+          .feature__title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+          }
+
+          .feature__description {
+            font-size: 1.5rem;
+            line-height: 30px;
+            color: rgba(255, 255, 255, .5);
+            margin-bottom: 20px;
+          }
+
+        }
+
+        .phone-wrapper {
+          display: none;
+          position: relative;
+
+          .phone {
+            position: relative;
+            width: 100%;
+          }
+
+          &::after {
+            // content: '';
+            // background-color: $rectangle-color;
+            // opacity: .4;
+            // position: absolute;
+            // top: 55px;
+            // bottom: 88px;
+            // left: 41px;
+            // right: 50px;
+
+          }
+
+          .play-icon {
+            @include center();
+          }
+        }
+      }
+    }
   }
 }
 
@@ -547,7 +607,7 @@ html {
       }
 
       .reviews {
-        padding: 40px 30px;
+        padding: 50px 30px;
         text-align: center;
 
         .wrapper {
@@ -621,6 +681,116 @@ html {
 
                 .comment {}
               }
+            }
+          }
+        }
+      }
+
+      .overview {
+
+
+        .wrapper {
+          max-width: 1500px;
+          @include margin-auto();
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-template-rows: auto auto;
+          grid-gap: 20px;
+          grid-template-areas:
+            "feature1 phone feature3"
+            "feature2 phone feature4";
+          align-items: center;
+          padding: 50px 20px;
+
+          .feature {
+            position: relative;
+            max-width: 600px;
+            text-align: initial;
+            @include margin-auto();
+            color: $white-color;
+
+            &.feature1,
+            &.feature2 {
+              text-align: right;
+              padding-right: 100px;
+
+              .feature__icon {
+                top: 0;
+                right: 0;
+              }
+            }
+
+            &.feature3,
+            &.feature4 {
+              text-align: left;
+              padding-left: 100px;
+
+              .feature__icon {
+                top: 0;
+                left: 0;
+              }
+            }
+
+            .feature__title {
+              font-size: 2.4rem;
+              margin-bottom: 20px;
+              letter-spacing: 2px;
+            }
+
+            &.feature1 {
+              grid-area: feature1;
+            }
+
+            &.feature2 {
+              grid-area: feature2;
+            }
+
+            &.feature3 {
+              grid-area: feature3;
+            }
+
+            &.feature4 {
+              grid-area: feature4;
+            }
+
+            .feature__description {
+              font-size: 1.6rem;
+              line-height: 30px;
+              color: rgba(255, 255, 255, .5);
+              margin-bottom: 20px;
+            }
+
+            .feature__icon {
+              position: absolute;
+            }
+
+          }
+
+          .phone-wrapper {
+            grid-area: phone;
+
+            display: block;
+            position: relative;
+
+            .phone {
+              position: relative;
+              width: 100%;
+            }
+
+            &::after {
+              // content: '';
+              // background-color: $rectangle-color;
+              // opacity: .4;
+              // position: absolute;
+              // top: 55px;
+              // bottom: 88px;
+              // left: 41px;
+              // right: 50px;
+
+            }
+
+            .play-icon {
+              @include center();
             }
           }
         }
