@@ -396,6 +396,58 @@ html {
         }
       }
     }
+
+    .newsletter {
+      text-align: center;
+      margin-top: 50px;
+
+      .wrapper {
+        padding: 0 30px;
+
+        .newsletter__title {
+          font-size: 4rem;
+          margin-bottom: 30px;
+          color: $headers-color;
+          font-weight: bold;
+
+          .dot {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: $main-gradient;
+          }
+        }
+
+        .newsletter__text {
+          font-size: 1.5rem;
+          line-height: 25px;
+          margin-bottom: 30px;
+          color: $text-color;
+        }
+
+        .form {
+          .input__label {
+            .form__input {
+              display: block;
+              width: 100%;
+              margin-bottom: 20px;
+              padding: 15px 35px;
+              border: none;
+              border-radius: $form-radius;
+              background: $input-bg;
+            }
+          }
+
+          .form__btn {
+            padding: 15px 35px;
+            background-image: $main-gradient;
+            color: $white-color;
+            border: none;
+            border-radius: $form-radius;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -693,7 +745,7 @@ html {
           max-width: 1500px;
           @include margin-auto();
           display: grid;
-          grid-template-columns: auto auto auto;
+          grid-template-columns: repeat(3, 1fr);
           grid-template-rows: auto auto;
           grid-gap: 20px;
           grid-template-areas:
@@ -739,18 +791,22 @@ html {
 
             &.feature1 {
               grid-area: feature1;
+              align-self: end;
             }
 
             &.feature2 {
               grid-area: feature2;
+              align-self: start;
             }
 
             &.feature3 {
               grid-area: feature3;
+              align-self: end;
             }
 
             &.feature4 {
               grid-area: feature4;
+              align-self: start;
             }
 
             .feature__description {
@@ -791,6 +847,50 @@ html {
 
             .play-icon {
               @include center();
+            }
+          }
+        }
+      }
+
+      .newsletter {
+        margin-top: 100px;
+
+        .wrapper {
+          max-width: 1200px;
+          @include margin-auto();
+
+          .newsletter__title {
+            font-size: 4rem;
+            margin-bottom: 50px;
+          }
+
+          .newsletter__text {
+            font-size: 1.4rem;
+            line-height: 25px;
+            margin-bottom: 100px;
+            color: $text-color;
+          }
+
+          .form {
+            width: 600px;
+            margin: 0 auto;
+            position: relative;
+
+            .input__label {
+              .form__input {
+                position: relative;
+                width: 100%;
+                margin: 0 auto 20px;
+              }
+            }
+
+            .form__btn {
+              padding: 15px 50px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translateX(-50%, -50%);
+              box-shadow: 0 10px 30px 0 #df1b3d4d;
             }
           }
         }
