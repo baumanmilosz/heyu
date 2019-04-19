@@ -265,6 +265,7 @@ html {
           @include margin-auto();
 
           .comment-box {
+            position: relative;
             max-width: 400px;
             @include margin-auto();
             margin-bottom: 50px;
@@ -283,6 +284,30 @@ html {
               color: $text-color;
               margin-bottom: 40px;
 
+              &:after,
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 10%;
+                top: 100%;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px;
+                transform: rotate(90deg)
+              }
+
+              &:after {
+                top: 100%;
+                border-color: transparent transparent transparent $white-color;
+              }
+
+              &:before {
+                top: 100%;
+                border-color: transparent transparent transparent $text-color;
+              }
+
               .comment__company {
                 margin-top: 10px;
                 -webkit-background-clip: text;
@@ -291,16 +316,6 @@ html {
                 font-weight: bold;
               }
 
-              &::after {
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 50%;
-                transform: translateX(-50%);
-                display: block;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-              }
             }
 
             .author {
