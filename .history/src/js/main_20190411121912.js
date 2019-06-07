@@ -1,1 +1,0 @@
-const hamburger = document.querySelector('.page-nav__link');

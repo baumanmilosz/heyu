@@ -165,7 +165,7 @@ html {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
         max-width: 400px;
-        @include margin-auto;
+        @include auto;
 
         .app-feature {
           display: grid;
@@ -262,12 +262,12 @@ html {
 
         .reviews-wrapper {
           max-width: 1200px;
-          @include margin-auto();
+          @include auto();
 
           .comment-box {
             position: relative;
             max-width: 400px;
-            @include margin-auto();
+            @include auto();
             margin-bottom: 50px;
 
             .comment {
@@ -357,14 +357,14 @@ html {
 
       .wrapper {
         max-width: 1200px;
-        @include margin-auto();
+        @include auto();
         display: grid;
         grid-template-columns: auto;
         padding: 50px 20px;
 
         .feature {
           max-width: 400px;
-          @include margin-auto();
+          @include auto();
           text-align: center;
           color: $white-color;
           margin-bottom: 60px;
@@ -393,20 +393,8 @@ html {
             width: 100%;
           }
 
-          &::after {
-            // content: '';
-            // background-color: $rectangle-color;
-            // opacity: .4;
-            // position: absolute;
-            // top: 55px;
-            // bottom: 88px;
-            // left: 41px;
-            // right: 50px;
-
-          }
-
           .play-icon {
-            @include center();
+            @include position();
           }
         }
       }
@@ -539,7 +527,8 @@ html {
 
         .footer-form {
           position: relative;
-
+          .lang-label {
+            position: relative;
           .lang-list {
             margin: 20px 0;
             padding: 10px 25px;
@@ -559,6 +548,7 @@ html {
             font-size: .8rem;
             transform: translateY(-50%);
           }
+        }
         }
       }
     }
@@ -590,15 +580,8 @@ html {
           justify-content: space-between;
           animation: none;
 
-          .page-nav__title {
-
-            .page-nav__link {}
-          }
-
           .page-nav__btn {
             display: none;
-
-            .page-nav__icon {}
           }
 
           .page-nav__list {
@@ -615,7 +598,7 @@ html {
                 width: 100%;
                 height: 2px;
                 background-color: #fff;
-                @include center();
+                @include position();
                 animation: line .3s 1 both ease;
               }
 
@@ -635,14 +618,9 @@ html {
             }
           }
         }
-
-        .page-nav.opened {}
-
-        .page-nav.opened .page-nav__list {}
-
         .page-hero {
           max-width: 1600px;
-          @include margin-auto;
+          @include auto();
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
@@ -658,10 +636,6 @@ html {
             .page-hero__description {
               font-size: 1.6rem;
               margin-bottom: 60px;
-            }
-
-            .page-hero__btn {
-              .page-hero__text {}
             }
           }
 
@@ -696,7 +670,7 @@ html {
           grid-template-columns: auto;
           grid-template-rows: auto auto;
           max-width: 1200px;
-          @include margin-auto;
+          @include auto();
 
           .app-feature {
             display: grid;
@@ -804,7 +778,7 @@ html {
               grid-template-rows: auto auto;
               align-content: space-between;
               max-width: 400px;
-              @include margin-auto();
+              @include auto();
               margin-bottom: 20px;
               text-align: left;
 
@@ -813,16 +787,9 @@ html {
                 min-height: 220px;
                 line-height: 30px;
                 font-size: 1.2rem;
-
-
-                .comment__company {}
-
-                &::after {}
               }
 
               .author {
-
-
                 .avatar {
                   display: grid;
                   grid-template-columns: auto auto;
@@ -846,8 +813,6 @@ html {
 
               &:nth-child(2) {
                 margin-top: -30px;
-
-                .comment {}
               }
             }
           }
@@ -855,12 +820,10 @@ html {
       }
 
       .overview {
-
-
         .wrapper {
           position: relative;
           max-width: 1500px;
-          @include margin-auto();
+          @include auto();
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           grid-template-rows: auto auto;
@@ -876,7 +839,7 @@ html {
             position: relative;
             max-width: 600px;
             text-align: initial;
-            @include margin-auto();
+            @include auto();
             color: $white-color;
 
             &.feature1,
@@ -956,7 +919,7 @@ html {
           }
 
           .play-icon {
-            @include center();
+            @include position();
           }
         }
       }
@@ -967,7 +930,7 @@ html {
 
       .wrapper {
         max-width: 1200px;
-        @include margin-auto();
+        @include auto();
 
         .newsletter__title {
           font-size: 4rem;
@@ -1068,34 +1031,6 @@ html {
 
       .page-header {
 
-        .page-nav {
-          .page-nav__title {
-            .page-nav__link {}
-          }
-
-          .page-nav__btn {
-
-
-            .page-nav__icon {}
-          }
-
-          .page-nav__list {
-
-
-            .page-nav__item {
-
-
-              &:hover:before {}
-
-              .page-nav__link {}
-            }
-          }
-        }
-
-        .page-nav.opened {}
-
-        .page-nav.opened .page-nav__list {}
-
         .page-hero {
 
           .slogan {
@@ -1107,13 +1042,8 @@ html {
               font-size: 2.4rem;
               margin-bottom: 120px;
             }
-
-            .page-hero__btn {
-              .page-hero__text {}
-            }
           }
 
-          .picture-wrapper {}
 
         }
       }

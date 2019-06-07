@@ -564,7 +564,11 @@ html body .page-footer .wrapper .footer-form {
   position: relative;
 }
 
-html body .page-footer .wrapper .footer-form .lang-list {
+html body .page-footer .wrapper .footer-form .lang-label {
+  position: relative;
+}
+
+html body .page-footer .wrapper .footer-form .lang-label .lang-list {
   margin: 20px 0;
   padding: 10px 25px;
   border-radius: 35px;
@@ -576,7 +580,7 @@ html body .page-footer .wrapper .footer-form .lang-list {
   appearance: none;
 }
 
-html body .page-footer .wrapper .footer-form .arrow-icon {
+html body .page-footer .wrapper .footer-form .lang-label .arrow-icon {
   position: absolute;
   top: 50%;
   right: 10px;
