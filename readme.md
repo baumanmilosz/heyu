@@ -11,7 +11,7 @@ One of many landing page in my portfolio. I wanted to playing with different sha
 * RWD - Media Queries
 
 ## Setup
-Link to demo: https://baumanmilosz.github.io/heyu/.
+Link to demo: https://baumanmilosz.github.io/heyu-page/.
 
 ## Status
 Projects is in progress.
